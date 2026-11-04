@@ -1,0 +1,79 @@
+import { MetadataRoute } from 'next';
+import { seoPages } from '../lib/seoData';
+import { getAllSlugs } from '../lib/blog';
+
+const SITE_URL = 'https://refinedocs.com';
+
+const locales = ['en', 'es', 'fr', 'pt-PT', 'it'];
+
+const toolSlugs = [
+  'bg-remover', 'watermark', 'watermark-remover', 'image-to-text', 'resize',
+  'compress-images', 'compress-pdf', 'compress-video',
+  'image-converter', 'heic-to-png', 'pdf-to-image', 'svg-to-png',
+  'pdf-to-csv', 'csv-to-pdf', 'pdf-to-excel', 'excel-to-pdf',
+  'excel-to-csv', 'csv-to-excel', 'pdf-to-word', 'word-to-pdf',
+  'video-to-gif',
+];
+
+const staticPages = ['', '/blog', '/faq', '/pricing', '/privacy', '/terms'];
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const now = new Date().toISOString().split('T')[0];
+  const entries: MetadataRoute.Sitemap = [];
+
+  // Static pages across all locales
+  for (const page of staticPages) {
+    for (const locale of locales) {
+      const priority = page === '' ? 1.0 : page === '/tools' ? 0.9 : page === '/blog' || page === '/faq' || page === '/pricing' ? 0.7 : 0.3;
+      const changeFrequency: 'daily' | 'weekly' | 'monthly' | 'yearly' =
+        page === '' ? 'daily' : page === '/tools' ? 'weekly' : page === '/blog' || page === '/faq' || page === '/pricing' ? 'weekly' : 'yearly';
+
+      entries.push({
+        url: `${SITE_URL}/${locale}${page}`,
+        lastModified: now,
+        changeFrequency,
+        priority,
+      });
+    }
+  }
+
+  // Tool pages — each tool × each locale = unique URL
+  for (const slug of toolSlugs) {
+    for (const locale of locales) {
+      entries.push({
+        url: `${SITE_URL}/${locale}/tools/${slug}`,
+        lastModified: now,
+        changeFrequency: 'weekly',
+        priority: 0.8,
+      });
+    }
+  }
+
+  // SEO use-case landing pages — each slug × each locale = unique URL
+  const seoSlugs = Object.keys(seoPages);
+  for (const slug of seoSlugs) {
+    for (const locale of locales) {
+      entries.push({
+        url: `${SITE_URL}/${locale}/${slug}`,
+        lastModified: now,
+        changeFrequency: 'weekly',
+        priority: 0.8,
+      });
+    }
+  }
+
+  // Blog pages — each blog slug × each locale = unique URL
+  const blogSlugs = getAllSlugs();
+  for (const slug of blogSlugs) {
+    for (const locale of locales) {
+      entries.push({
+        url: `${SITE_URL}/${locale}/blog/${slug}`,
+        lastModified: now,
+        changeFrequency: 'monthly',
+        priority: 0.7,
+      });
+    }
+  }
+
+  return entries;
+}
