@@ -14,7 +14,7 @@ function getAvailablePort() {
     const s = net.createServer();
     s.unref();
     s.on('error', reject);
-    s.listen(0, '127.0.0.1', () => {
+    s.listen(0, 'localhost', () => {
       const { port } = s.address();
       s.close(() => resolve(port));
     });
@@ -57,7 +57,11 @@ async function startStandaloneServer(port) {
     env: {
       ...process.env,
       PORT: String(port),
-      HOSTNAME: '127.0.0.1',
+      // Must be 'localhost' (not '127.0.0.1'): Next.js proxies middleware
+      // rewrites (next-intl) to http://localhost:<port>, which on macOS
+      // resolves to ::1 first. Binding to 127.0.0.1 only causes ECONNRESET
+      // and a 500 "Internal Server Error" on every localized page.
+      HOSTNAME: 'localhost',
       NODE_ENV: 'production',
       ELECTRON_RUN_AS_NODE: '1',
     },
@@ -73,8 +77,35 @@ async function startStandaloneServer(port) {
     console.log(`[Electron] Server process exited with code ${code}, signal ${signal}`);
   });
 
-  await waitForServer(`http://127.0.0.1:${port}`);
+  await waitForServer(`http://localhost:${port}`);
   console.log(`[Electron] Standalone server is ready on port ${port}`);
+}
+
+// Supported UI locales (must match src/i18n/config)
+const SUPPORTED_LOCALES = ['en', 'es', 'fr', 'it', 'pt-PT'];
+
+// Pick the UI locale from the OS language, falling back to English
+function getStartLocale() {
+  const sys = (app.getLocale() || 'en').toLowerCase();
+  if (sys.startsWith('pt')) return 'pt-PT';
+  const base = sys.split('-')[0];
+  return SUPPORTED_LOCALES.includes(base) ? base : 'en';
+}
+
+// The desktop app has no landing page: it opens straight into the tools workspace
+function getToolsUrl(baseUrl, locale) {
+  return `${baseUrl}/${locale || getStartLocale()}/tools`;
+}
+
+// Matches the marketing landing page: "/" or "/<locale>" (with optional trailing slash)
+const LANDING_PATH_RE = new RegExp(`^/(?:(${SUPPORTED_LOCALES.join('|')})/?)?$`);
+
+function getLandingLocale(url, baseUrl) {
+  if (!url.startsWith(baseUrl)) return null;
+  const { pathname } = new URL(url);
+  const match = pathname.match(LANDING_PATH_RE);
+  if (!match) return null;
+  return match[1] || getStartLocale();
 }
 
 async function createWindow(targetUrl) {
@@ -104,7 +135,19 @@ async function createWindow(targetUrl) {
     return { action: 'allow' };
   });
 
-  await mainWindow.loadURL(targetUrl);
+  // Redirect any navigation to the landing page (logo click, "Home" links,
+  // client-side router pushes) back to the tools workspace.
+  const redirectLanding = (event, url) => {
+    const locale = getLandingLocale(url, targetUrl);
+    if (locale) {
+      if (event && typeof event.preventDefault === 'function') event.preventDefault();
+      mainWindow.loadURL(getToolsUrl(targetUrl, locale));
+    }
+  };
+  mainWindow.webContents.on('will-navigate', redirectLanding);
+  mainWindow.webContents.on('did-navigate-in-page', (_event, url) => redirectLanding(null, url));
+
+  await mainWindow.loadURL(getToolsUrl(targetUrl));
 
   mainWindow.on('closed', () => {
     mainWindow = null;
@@ -131,7 +174,7 @@ app.whenReady().then(async () => {
     try {
       const port = await getAvailablePort();
       await startStandaloneServer(port);
-      targetUrl = `http://127.0.0.1:${port}`;
+      targetUrl = `http://localhost:${port}`;
     } catch (err) {
       console.error('[Electron] Failed to start standalone server:', err);
       app.quit();
