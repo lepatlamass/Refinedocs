@@ -2,6 +2,9 @@
   "$schema": "https://raw.githubusercontent.com/electron-userland/electron-builder/master/packages/app-builder-lib/scheme.json",
   "appId": "com.refinedocs.app",
   "productName": "Refinedocs",
+  "npmRebuild": false,
+  "nodeGypRebuild": false,
+  "publish": null,
   "directories": {
     "output": "dist-desktop"
   },
