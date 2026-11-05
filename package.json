@@ -2,7 +2,11 @@
   "name": "refinedocs",
   "version": "1.0.0",
   "description": "100% Free, Client-Side, Open-Source Document & Media Processing Suite",
-  "author": "Refinedocs",
+  "author": {
+    "name": "Refinedocs",
+    "email": "konwoubuntu@gmail.com"
+  },
+  "desktopName": "refinedocs.desktop",
   "license": "Apache-2.0",
   "type": "module",
   "main": "desktop/main.cjs",

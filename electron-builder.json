@@ -52,6 +52,8 @@
   },
   "linux": {
     "category": "Office",
+    "maintainer": "Refinedocs <konwoubuntu@gmail.com>",
+    "synopsis": "Free, private, offline document and media toolkit",
     "icon": "desktop/icon.png",
     "target": [
       {
