@@ -1,15 +1,21 @@
-name: Build Desktop Apps (macOS, Windows, Linux)
+name: Build & Release Desktop Apps (macOS, Windows, Linux)
 
 on:
+  # Release every time a pull request is merged into main
+  pull_request:
+    types: [closed]
+    branches:
+      - main
+  # Build-only (no release) test runs
   push:
     branches:
       - standealone
-    tags:
-      - 'v*'
   workflow_dispatch:
 
 jobs:
   build:
+    # For pull requests, only run when the PR was actually merged (not just closed)
+    if: github.event_name != 'pull_request' || github.event.pull_request.merged == true
     name: Build on ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -27,6 +33,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          # On merged PRs, build exactly the merge commit
+          ref: ${{ github.event.pull_request.merge_commit_sha || github.sha }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -37,10 +46,19 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build Desktop Binaries
-        run: npm run dist:${{ matrix.platform }}
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build Desktop Binaries (retry on transient download errors)
+        shell: bash
+        run: |
+          for attempt in 1 2 3; do
+            echo "Build attempt $attempt of 3"
+            if npm run dist:${{ matrix.platform }}; then
+              exit 0
+            fi
+            echo "Attempt $attempt failed, retrying in 30s..."
+            sleep 30
+          done
+          echo "All build attempts failed"
+          exit 1
 
       - name: Upload Desktop Artifacts
         uses: actions/upload-artifact@v4
@@ -52,4 +70,43 @@ jobs:
             dist-desktop/*.exe
             dist-desktop/*.AppImage
             dist-desktop/*.deb
-          if-no-files-found: warn
+          if-no-files-found: error
+
+  release:
+    name: Publish GitHub Release
+    # Only publish after a merged PR into main, and only if all 3 platforms built
+    if: github.event_name == 'pull_request' && github.event.pull_request.merged == true
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Download all platform artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: release-assets
+          merge-multiple: true
+
+      - name: List release assets
+        run: ls -la release-assets
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          # Unique, ordered tag per merge, e.g. v1.0.42
+          tag_name: v1.0.${{ github.run_number }}
+          target_commitish: ${{ github.event.pull_request.merge_commit_sha }}
+          name: Refinedocs v1.0.${{ github.run_number }}
+          body: |
+            ## ${{ github.event.pull_request.title }}
+
+            Merged pull request #${{ github.event.pull_request.number }} by @${{ github.event.pull_request.user.login }}.
+
+            ### Downloads
+            - **macOS**: `.dmg` / `.zip` (Apple Silicon & Intel)
+            - **Windows**: `.exe` installer / portable
+            - **Linux**: `.AppImage` / `.deb`
+          files: release-assets/*
+          fail_on_unmatched_files: true
+          make_latest: true
