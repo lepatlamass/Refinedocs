@@ -4,9 +4,17 @@
   "description": "100% Free, Client-Side, Open-Source Document & Media Processing Suite",
   "license": "Apache-2.0",
   "type": "module",
+  "main": "desktop/main.cjs",
   "scripts": {
     "dev": "next dev -p 3000",
+    "dev:desktop": "concurrently \"next dev -p 3000\" \"wait-on http://localhost:3000 && electron .\"",
     "build": "next build",
+    "build:desktop:assets": "node scripts/copy-standalone-assets.js",
+    "build:desktop": "next build && node scripts/copy-standalone-assets.js && electron-builder",
+    "dist:mac": "next build && node scripts/copy-standalone-assets.js && electron-builder --mac",
+    "dist:win": "next build && node scripts/copy-standalone-assets.js && electron-builder --win",
+    "dist:linux": "next build && node scripts/copy-standalone-assets.js && electron-builder --linux",
+    "dist:all": "next build && node scripts/copy-standalone-assets.js && electron-builder -mwl",
     "start": "next start -p 3000",
     "lint": "next lint"
   },
@@ -45,10 +53,14 @@
     "@types/react": "^18.3.10",
     "@types/react-dom": "^18.3.0",
     "autoprefixer": "^10.4.20",
+    "concurrently": "^10.0.6",
+    "electron": "^45.2.3",
+    "electron-builder": "^26.18.0",
     "eslint": "^8.57.0",
     "eslint-config-next": "14.2.13",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.13",
-    "typescript": "^5.6.2"
+    "typescript": "^5.6.2",
+    "wait-on": "^9.5.1"
   }
 }
