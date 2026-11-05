@@ -117,7 +117,7 @@ To get the absolute best PageSpeed scores, combine image compression with these 
 Don't compromise on website speed or image quality. Start optimizing your royalty-free photos today and watch your site's performance soar.
 
 ✨ **Compress your images now**: [refinedocs.com/en/tools/compress-images](https://refinedocs.com/en/tools/compress-images)  
-✨ **Explore the suite**: Check out our other tools like **[HEIC to PNG Converter](https://refinedocs.com/en/tools/heic-to-png)** and **[AI Background Remover](https://refinedocs.com/en/tools/bg-remover)**.
+✨ **Explore the suite**: Check out our other tools like **[HEIC to PNG Converter](https://refinedocs.com/en/tools/heic-to-png)** and **[Image Converter](https://refinedocs.com/en/tools/image-converter)**.
 
 *Keep your site fast, keep your images sharp, and keep your users happy!*  
 **The Refinedocs Team** 💙

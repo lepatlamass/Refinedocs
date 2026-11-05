@@ -7,7 +7,7 @@ const SITE_URL = 'https://refinedocs.com';
 const locales = ['en', 'es', 'fr', 'pt-PT', 'it'];
 
 const toolSlugs = [
-  'bg-remover', 'watermark', 'watermark-remover', 'image-to-text', 'resize',
+  'watermark', 'resize',
   'compress-images', 'compress-pdf', 'compress-video',
   'image-converter', 'heic-to-png', 'pdf-to-image', 'svg-to-png',
   'pdf-to-csv', 'csv-to-pdf', 'pdf-to-excel', 'excel-to-pdf',
@@ -15,7 +15,7 @@ const toolSlugs = [
   'video-to-gif',
 ];
 
-const staticPages = ['', '/blog', '/faq', '/pricing', '/privacy', '/terms'];
+const staticPages = ['', '/blog', '/faq', '/privacy', '/terms'];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date().toISOString().split('T')[0];

@@ -11,7 +11,6 @@ const TOOL_MAPPING: Record<string, { slug: string; label: string }[]> = {
     { slug: 'compress-pdf', label: 'Compress PDF' },
   ],
   'Image Tools': [
-    { slug: 'bg-remover', label: 'Background Remover' },
     { slug: 'image-converter', label: 'Image Converter' },
     { slug: 'compress-images', label: 'Compress Images' },
     { slug: 'resize', label: 'Image Resizer' },
@@ -29,9 +28,7 @@ const TOOL_MAPPING: Record<string, { slug: string; label: string }[]> = {
   'heic': [{ slug: 'heic-to-png', label: 'HEIC to PNG Converter' }],
   'png': [{ slug: 'image-converter', label: 'Image Converter' }],
   'svg': [{ slug: 'svg-to-png', label: 'SVG to PNG Converter' }],
-  'ocr': [{ slug: 'image-to-text', label: 'Image to Text (OCR)' }],
   'watermark': [{ slug: 'watermark', label: 'Add Watermark' }],
-  'background-removal': [{ slug: 'bg-remover', label: 'Background Remover' }],
   'pdf to csv': [{ slug: 'pdf-to-csv', label: 'PDF to CSV Converter' }],
   'convert pdf': [{ slug: 'pdf-to-excel', label: 'PDF to Excel' }],
   'compress': [{ slug: 'compress-pdf', label: 'Compress PDF' }],

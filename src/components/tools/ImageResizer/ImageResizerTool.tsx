@@ -344,7 +344,7 @@ export default function ImageResizerTool() {
                       {img.status === 'processing' && (
                         <div className="flex items-center gap-2 text-cyan-400 text-xs font-bold">
                           <Loader2 size={14} className="animate-spin" />
-                          {tt('bg-remover-status-processing')}
+                          {tt('resize-processing')}
                         </div>
                       )}
                       {img.status === 'completed' && (

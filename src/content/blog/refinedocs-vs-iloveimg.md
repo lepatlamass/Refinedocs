@@ -35,7 +35,7 @@ Let's look at how the image tools on both platforms stack up.
 Isolating a product or portrait by removing the background is one of the most common image editing workflows.
 
 - **iLoveIMG:** Offers a background removal tool, but free users are limited in resolution and file size. Processing happens in the cloud, which can take several seconds depending on server load and queue sizes.
-- **Refinedocs:** Refinedocs' [Background Remover](https://refinedocs.com/en/tools/bg-remover) uses an AI model that runs directly in your browser. This means your photo is analyzed locally on your GPU/CPU, and the background is removed instantly. The output is high-resolution, completely free of watermarks, and respects your privacy.
+- **Refinedocs:** Refinedocs' [Image Converter](https://refinedocs.com/en/tools/image-converter) and compression engine run directly in your browser. This means your photo is processed locally on your device, and the conversion is completed instantly. The output is high-resolution, completely free of watermarks, and respects your privacy.
 
 ---
 

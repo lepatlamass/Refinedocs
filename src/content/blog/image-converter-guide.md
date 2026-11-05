@@ -140,11 +140,11 @@ Get the most out of every conversion:
 
 Once you try the Image Converter, explore these favorites:
 
-✨ **AI Background Remover**: Create transparent product photos in one click  
+✨ **Image Resizer**: Resize images by dimensions or percentage
 ✨ **Image Compressor**: Reduce file size without visible quality loss  
 ✨ **HEIC to PNG**: Convert iPhone photos for universal compatibility  
-✨ **Image-to-Text OCR**: Extract words from screenshots or documents  
-✨ **PDF Tools**: Convert, merge, split, and compress PDFs — all in one place  
+✨ **SVG to PNG**: Convert vector artwork into high-res raster images  
+✨ **PDF Tools**: Convert, merge, and compress PDFs — all in one place  
 
 All built with the same promise: **Simple. Secure. Powerful.**
 

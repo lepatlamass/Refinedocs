@@ -126,60 +126,22 @@ export default async function TermsPage() {
           <h4 id="8-2-liability">8.2 Liability for Services and Software, information and templates</h4>
           <p>We specifically disclaim any liability for any actions resulting from your use of any Services or Software. You may use and access the Services or Software at your own discretion and risk, and you are solely responsible for any damage to your computer system or loss of data that results from the use and access of any Service or Software. The information and templates provided by DtempoLabs (&quot;we&quot;, &quot;us&quot; or &quot;our&quot;) on <strong>refinedocs.com</strong> (&quot;website&quot;) and our services are provided for information purposes only. All information on the website is provided in good faith, however under no circumstance we shall have any liability to you as a result of your use and/or your reliance on the information, templates, Services or Software.</p>
 
-          <h4 id="8-3-storage">8.3 Storage of files</h4>
-          <p>Our service may offer temporary storage or sharing capabilities for processed files. This functionality relies on temporary server storage or unique URLs. We can&apos;t promise that stored files will always appear to or be accessible by you beyond the immediate processing session unless explicitly saved to a persistent location you control (e.g., your local device, a connected cloud service if implemented). You should always have a copy of your document saved on your own device. We are not responsible for lost documents accessed via temporary links or stored temporarily on our servers after the period specified in our Privacy Notice and cannot be held liable for any loss.</p>
+          <h4 id="8-3-storage">8.3 Local-Only Execution</h4>
+          <p>Refinedocs operates entirely client-side in your web browser. No user documents or processed files are permanently hosted on our servers. Files are processed locally on your device and saved directly to your local storage. You are responsible for maintaining backup copies of your files.</p>
 
           <h3 id="9-limitation-of-liability">9. Limitation of Liability</h3>
           
           <h4 id="9-1-liability-of-refinedocs">9.1 Liability of Refinedocs</h4>
-          <p>Refinedocs is not liable to you or anyone else for: (a) any loss of use, data, goodwill, or profits, whether or not foreseeable; and (b) any special, incidental, indirect, consequential, or punitive damages whatsoever (even if we have been advised of the possibility of these damages), including those (x) resulting from loss of use, data, or profits, whether or not foreseeable, (y) based on any theory of liability, including breach of contract or warranty, negligence or other tortious action, or (z) arising from any other claim arising out of or in connection with your use of or access to the Services or Software. Nothing in these terms limits or excludes our liability for gross negligence, for our (or our employees’) intentional misconduct, or for death or personal injury.</p>
+          <p>Refinedocs is not liable to you or anyone else for: (a) any loss of use, data, goodwill, or profits, whether or not foreseeable; and (b) any special, incidental, indirect, consequential, or punitive damages whatsoever (even if we have been advised of the possibility of these damages), including those (x) resulting from loss of use, data, or profits, whether or not foreseeable, (y) based on any theory of liability, including breach of contract or warranty, negligence or other tortious action, or (z) arising from any other claim arising out of or in connection with your use of or access to the Services or Software.</p>
 
-          <h4 id="9-2-limited-liability">9.2 Limited liability</h4>
-          <p>Refinedocs’s total liability in any matter arising out of or related to these terms is limited to the aggregate amount that you paid for access to the Service and Software during the three-month period preceding the event giving rise to the liability, or a fixed amount of 10,000 XAF, whichever is higher. This limitation will apply even if we have been advised of the possibility of the liability exceeding the amount and notwithstanding any failure of essential purpose of any limited remedy.</p>
-
-          <h4 id="9-3-limitation">9.3 Limitation</h4>
-          <p>The limitations and exclusions in this Section 9 apply to the maximum extent permitted by law.</p>
+          <h4 id="9-2-limitation">9.2 Limitation</h4>
+          <p>The limitations and exclusions in this Section 9 apply to the maximum extent permitted by applicable law.</p>
 
           <h3 id="10-termination">10. Termination</h3>
-          
-          <h4 id="10-1-termination-by-you">10.1 Termination by You</h4>
-          <p>You may terminate your subscription or account at any time. If you terminate your subscription prior to the end of the current billing cycle or agreed subscription term, an early termination fee may apply.</p>
-          <p>Where such termination is exercised on the basis of a statutory right allowing early termination, you agree that early termination fees apply, and that such fees correspond to the portion of the payment that would otherwise have been payable for the remainder of the agreed subscription term.</p>
-          <p>Any prepaid fees shall first be applied to the portion of the Services already provided and the applicable early termination fee. Any remaining balance may be refunded on a pro-rata basis, where required by mandatory law or expressly determined by the Company.</p>
-          <p>If you do not want to accept new fees and prices, you may terminate the Services / this Agreement in accordance with Section 6.1.</p>
+          <p>You may discontinue your use of the Services at any time. Refinedocs may modify, suspend, or discontinue the Software or Services, in whole or in part, at any time without liability.</p>
 
-          <h4 id="10-2-termination-by-us">10.2 Termination by Us</h4>
-          <p>Refinedocs may terminate the Service/this agreement at any time. If we terminate these terms for reasons other than for cause, then we will make a reasonable effort to notify you at least 30 days prior to termination via the email address you provide to us. We may, at any time, terminate your right to use and access the Services or Software if:</p>
-          <ul>
-            <li>(a) you breach any provision of these terms (or act in a manner that clearly shows you do not intend to, or are unable to, comply with these terms);</li>
-            <li>(b) you fail to make the timely payment of fees for the Software or the Services, if any;</li>
-            <li>(c) we are required to do so by law (for example, where the provision of the Services or Software to you is, or becomes, unlawful);</li>
-            <li>(d) we elect to discontinue the Services or Software, in whole or in part, (such as if it becomes impractical for us to continue offering Services in your region due to change of law); or</li>
-            <li>(e) there has been an extended period of inactivity in your free account.</li>
-          </ul>
-
-          <h4 id="10-3-survival">10.3 Survival</h4>
-          <p>Upon expiration or termination of these terms, any perpetual licenses you have granted, your indemnification obligations, our warranty disclaimers or limitations of liabilities, and dispute resolution provisions stated in these terms will survive. Upon the expiration or termination of the Services, some or all of the Software may cease to operate without prior notice.</p>
-
-          <h3 id="11-investigations">11. Investigations / Disclosure</h3>
-          <p>We may access or disclose information about you, or your use of the Services, (a) when it is required by law; (b) to respond to your requests for customer service support; or (c) when we, in our discretion, think it is necessary to protect the rights, property, or personal safety of us, our users, or the public.</p>
-
-          <h3 id="12-dispute-resolution">12. Dispute Resolution</h3>
-          
-          <h4 id="12-1-process">12.1 Process</h4>
-          <p>For any concern or dispute you may have, you agree to first try to resolve the dispute informally by contacting us. If a dispute is not resolved within 30 days of submission, you or Refinedocs must resolve any claims relating to these terms, the Services, or the Software through final and binding arbitration, except that you or Refinedocs may assert claims before the courts of <strong>Douala, Cameroon</strong>.</p>
-
-          <h4 id="12-2-rules">12.2 Rules</h4>
-          <p>If you or Refinedocs decide to resort to arbitration as per the foregoing paragraph, the <strong>Cameroon Mediation and Arbitration Center (CMAC) Rules</strong> will administer the arbitration in <strong>Douala</strong> under the applicable rules. There will be one arbitrator that you and Refinedocs both select. The arbitration will be conducted in the English or French language. Judgment upon the award rendered may be entered and will be enforceable in any court of competent jurisdiction having jurisdiction over the parties.</p>
-
-          <h4 id="12-3-no-class-actions">12.3 No Class Actions</h4>
-          <p>You may only resolve disputes with us on an individual basis, and may not bring a claim as a plaintiff or a class member in a class, consolidated, or representative action.</p>
-
-          <h4 id="12-4-injunctive-relief">12.4 Injunctive Relief</h4>
-          <p>Notwithstanding the foregoing, in the event of your or others’ unauthorized access to or use of the Services or content in violation of these terms you agree that we are entitled to apply for injunctive remedies (or an equivalent type of urgent legal relief) in any jurisdiction.</p>
-
-          <h3 id="13-compliance">13. Compliance with Licenses</h3>
-          <p>If you are a business, company, or organization, then we may, no more than once every 12 months, upon seven 7 days’ prior notice to you, appoint our personnel or an independent third party auditor who is obliged to maintain confidentiality to inspect (including manual inspection, electronic methods, or both) your records, systems, and facilities to verify that your installation and use of any and all Software or Services is in conformity with its valid licenses from us. Additionally, you will provide us with all records and information requested by us in order to verify that its installation and use of any and all Software and Services is in conformity with your valid licenses from us within 30 days of our request. If the verification discloses a shortfall in licenses for the Software or Services, you will immediately acquire any necessary licenses, subscriptions, and any applicable back maintenance and support. If the underpaid fees exceed 5% of the value of the payable license fees, then then you will also pay for our reasonable cost of conducting the verification.</p>
+          <h3 id="11-investigations">11. Open Source Licensing</h3>
+          <p>Refinedocs source code is licensed under the Apache License, Version 2.0 (and/or MIT License as specified in the repository). You may inspect, fork, modify, and distribute the software in compliance with the applicable open-source license terms.</p>
 
           <h3 id="14-modification-terms">14. Modification</h3>
           <p>We may modify these terms or any additional terms that apply to a Service or Software in order to, for example, reflect changes to the law or changes to our Services or Software. You should look at the terms regularly. We will post notice of modifications to these terms on this page. We will post notice of modified additional terms in the applicable Service or Software. By continuing to use or access the Services or Software after the revisions come into effect, you agree to be bound by the revised terms.</p>

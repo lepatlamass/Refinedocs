@@ -2,22 +2,22 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { ChevronDown, HelpCircle, CreditCard, Shield } from 'lucide-react';
+import { ChevronDown, HelpCircle, Shield, Cpu } from 'lucide-react';
 
 const FAQ_CATEGORIES = [
   {
-    id: 'account',
+    id: 'general',
     icon: <HelpCircle className="w-5 h-5 text-[#d4ff33]" />,
     items: ['1', '2', '3', '4', '5']
   },
   {
-    id: 'payments',
-    icon: <CreditCard className="w-5 h-5 text-[#d4ff33]" />,
+    id: 'privacy',
+    icon: <Shield className="w-5 h-5 text-[#d4ff33]" />,
     items: ['6', '7', '8', '9', '10', '11']
   },
   {
     id: 'processing',
-    icon: <Shield className="w-5 h-5 text-[#d4ff33]" />,
+    icon: <Cpu className="w-5 h-5 text-[#d4ff33]" />,
     items: ['12', '13', '14', '15', '16', '17', '18']
   }
 ];

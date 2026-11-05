@@ -115,13 +115,13 @@ Deliver client data in their preferred format — quickly, accurately, and profe
 
 Get the most out of every extraction:
 
-🔹 **Use text-based PDFs**: Scanned images require OCR first — try Refinedocs' Image-to-Text tool for those  
+🔹 **Use text-based PDFs**: Tables in text-based PDFs yield the cleanest extraction results  
 🔹 **Check table structure**: Simple, well-formatted tables yield the cleanest CSV output  
 🔹 **Review before importing**: Open your CSV to confirm column alignment matches your expectations  
 🔹 **Download before you refresh**: Your converted file is ready instantly — save it to your device right away  
 🔹 **Split large PDFs**: For best results, convert one table or report section at a time  
 
-> 🔄 **Need to prep your PDF first?** Use Refinedocs' PDF Compressor to reduce file size, or Merge PDF to combine multiple sources before extraction — all in one place.
+> 🔄 **Need to prep your PDF first?** Use Refinedocs' PDF Compressor to reduce file size before extraction — all in one place.
 
 ---
 
@@ -131,9 +131,9 @@ Once you try the PDF to CSV converter, explore these favorites:
 
 ✨ **CSV to Excel**: Convert raw data back into editable spreadsheets  
 ✨ **PDF to Excel**: Extract tables directly into .XLSX format  
-✨ **Image-to-Text OCR**: Pull text from scanned documents or screenshots  
+✨ **PDF to Word**: Convert documents into editable DOCX format  
 ✨ **Excel to CSV**: The reverse workflow — perfect for data standardization  
-✨ **PDF Tools**: Merge, split, compress, and convert PDFs — all in one place  
+✨ **PDF Tools**: Compress, convert, and manage PDFs — all in one place  
 
 All built with the same promise: **Simple. Secure. Powerful.**
 

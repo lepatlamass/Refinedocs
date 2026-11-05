@@ -57,7 +57,7 @@ Each platform caters to slightly different user requirements.
   - **Direct PDF Editing:** If you need to type text directly onto a PDF or draw on it like a canvas, Smallpdf has a robust editor.
 - **Refinedocs is best for:**
   - **Data Extraction:** Refinedocs has highly optimized tables converters like [PDF to CSV](https://refinedocs.com/en/tools/pdf-to-csv) and [PDF to Excel](https://refinedocs.com/en/tools/pdf-to-excel) that cleanly structure layout tables into spreadsheets.
-  - **Image Processing:** Refinedocs includes high-speed AI tools, such as the [Background Remover](https://refinedocs.com/en/tools/bg-remover), which run client-side to instantly isolate products or portraits.
+  - **Image Processing:** Refinedocs includes high-speed client-side tools, such as the [Image Converter](https://refinedocs.com/en/tools/image-converter) and [HEIC to PNG Converter](https://refinedocs.com/en/tools/heic-to-png), which run locally in your browser.
 
 ---
 

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: '%s | Refinedocs – Free Tools',
   },
   description:
-    '100% free online document and image tools — no account, no watermarks, no limits. Convert PDF to Excel, Word & CSV, remove backgrounds, compress images, extract text with OCR & more. Free forever.',
+    '100% free online document and image tools — no account, no watermarks, no limits. Convert PDF to Excel, Word & CSV, convert images, compress files & more. 100% client-side privacy.',
   keywords: [
     'free PDF converter',
     'free online tools no sign up',
@@ -33,11 +33,7 @@ export const metadata: Metadata = {
     'free image compressor',
     'free image resizer',
     'free image converter',
-    'free background remover',
-    'free watermark remover',
     'free watermark tool',
-    'free image to text',
-    'free OCR online',
     'HEIC to PNG free',
     'HEIC to JPG free',
     'SVG to PNG free',
@@ -51,12 +47,6 @@ export const metadata: Metadata = {
   authors: [{ name: 'Refinedocs' }],
   creator: 'Refinedocs',
   publisher: 'Refinedocs',
-  verification: {
-    other: {
-      'msvalidate.01': ['2CF4E38D40DE9951A5C5AFBD56FEFE03'],
-      'google-adsense-account': ['ca-pub-8969054910088588'],
-    },
-  },
   robots: {
     index: true,
     follow: true,
@@ -75,7 +65,7 @@ export const metadata: Metadata = {
     siteName: 'Refinedocs',
     title: 'Refinedocs – 100% Free Document & Image Tools | No Sign-Up Required',
     description:
-      '100% free online tools — no account, no watermarks, no limits. Convert PDF, remove backgrounds, compress images, OCR & more. Free forever.',
+      '100% free online tools — no account, no watermarks, no limits. Convert PDF, compress images, convert documents & more. 100% client-side privacy.',
     images: [
       {
         url: '/og-image.jpg',
@@ -90,7 +80,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Refinedocs – 100% Free Document & Image Tools | No Sign-Up Required',
     description:
-      '100% free online tools — no account needed. Convert PDF, compress images, remove backgrounds, OCR & more. No watermarks. Free forever.',
+      '100% free online tools — no account needed. Convert PDF, compress files, convert formats & more. 100% client-side privacy.',
     images: ['/og-image.jpg'],
     creator: '@refinedocs',
   },

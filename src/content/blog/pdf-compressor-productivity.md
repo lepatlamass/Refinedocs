@@ -112,13 +112,13 @@ Get your lean, clean PDF — ready to send anywhere
 
 | Feature | Refinedocs | Typical Free Tools | Desktop Software |
 |---------|-----------|-------------------|------------------|
-| **No Sign-Up Required** | ✅ | ❌ Often forced | ✅ |
+| **No Sign-Up Required** | ✅ 100% Free | ❌ Often forced | ✅ |
 | **3 Compression Levels** | ✅ | ❌ Usually 1 option | ✅ |
-| **Auto-Delete Policy** | ✅ (2 hours) | ❓ Often unclear | ✅ (local) |
+| **Privacy Architecture** | ✅ 100% Local (0 Uploads) | ❓ Uploaded to cloud | ✅ (local) |
 | **Mobile-Optimized** | ✅ Fully responsive | ❌ Clunky on phone | ❌ Desktop-only |
-| **Part of Larger Suite** | ✅ PDF, Image, AI tools | ❌ Single-purpose | ❌ Limited scope |
-| **Transparent Pricing** | ✅ Free + ~$3.99/mo Pro | ❌ Hidden upsells | ❌ $50–$200+ |
-| **ISO/GDPR Compliant** | ✅ | ❌ Rarely stated | ✅ |
+| **Part of Larger Suite** | ✅ 18 Local Tools | ❌ Single-purpose | ❌ Limited scope |
+| **Transparent Pricing** | ✅ 100% Free & Open Source | ❌ Hidden upsells | ❌ $50–$200+ |
+| **GDPR / Privacy** | ✅ Zero data collected | ❌ Rarely stated | ✅ |
 
 💡 **The Refinedocs Difference**: We're not *just* a compressor — we're your all-in-one document toolkit. But even if you only use this one tool, you're getting premium performance at zero cost.
 

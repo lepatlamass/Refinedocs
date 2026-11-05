@@ -78,37 +78,26 @@ Work with confidence, whether you're protecting client assets or editing persona
 - ♿ Clean, intuitive interface — no tutorial needed
 - 📱 Fully responsive design that adapts to your screen
 
-### 🆓 Free to Use, No Strings Attached
-- No credit card required to start
-- No mandatory account creation for basic watermarking
-- Generous file size limits on the free tier
-- Upgrade anytime for priority processing, batch tools, and advanced AI credits
+### 🆓 100% Free and Open Source
+- Completely free to use with zero cost
+- No accounts, logins, or credit cards required
+- Unlimited usage with no daily conversion limits
+- All processing happens 100% locally in your browser
 
 ---
 
-## 🛠️ How to Add or Remove a Watermark in 3 Simple Steps
+## 🛠️ How to Add a Watermark in 3 Simple Steps
 
-### To Add a Watermark:
-**Step 1: Upload Your Image**  
-Drag and drop your photo or click "Choose Files" to browse your device.
+**Step 1: Upload Your Document or Image**  
+Drag and drop your file or click "Choose Files" to browse your device.
 
 **Step 2: Customize Your Mark**  
 Add text or upload a logo, then adjust position, size, opacity, and style until it looks perfect.
 
 **Step 3: Download & Share**  
-Save your branded image and use it anywhere — social media, websites, client previews, or archives.
+Save your branded document or image instantly to your device.
 
-### To Remove a Watermark:
-**Step 1: Upload Your Image**  
-Select the image with the watermark you'd like to remove.
-
-**Step 2: Let AI Work Its Magic**  
-Our engine automatically detects and erases the watermark while reconstructing the background.
-
-**Step 3: Download Your Clean Image**  
-Get a pristine, watermark-free version ready for final use.
-
-🎉 That's it. Seriously.
+🎉 That's it. Simple, instant, and private.
 
 ---
 
@@ -141,7 +130,7 @@ Get the most out of every edit:
 🔹 **Download before you refresh**: Your processed image is ready instantly — save it to your device right away  
 🔹 **Keep originals**: Always archive your source file before editing — you never know when you'll need it  
 
-> 🔄 **Need more control?** Combine watermarking with Refinedocs' Image Compressor, Background Remover, or Format Converter for a complete visual workflow — all in one place.
+> 🔄 **Need more control?** Combine watermarking with Refinedocs' Image Compressor, Image Resizer, or Format Converter for a complete visual workflow — all in one place.
 
 ---
 
@@ -149,11 +138,11 @@ Get the most out of every edit:
 
 Once you try the Watermark Tool, explore these favorites:
 
-✨ **AI Background Remover**: Create transparent product photos in one click  
+✨ **Image Converter**: Convert between PNG, JPG, and WebP instantly  
 ✨ **Image Compressor**: Reduce file size without visible quality loss  
 ✨ **HEIC to PNG**: Convert iPhone photos for universal compatibility  
-✨ **Image-to-Text OCR**: Extract words from screenshots or documents  
-✨ **PDF Tools**: Convert, merge, split, and compress PDFs — all in one place  
+✨ **Resize Image**: Scale images to exact dimensions or percentages  
+✨ **PDF Tools**: Convert, compress, and secure PDFs — all in one place  
 
 All built with the same promise: **Simple. Secure. Powerful.**
 
